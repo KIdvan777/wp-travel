@@ -3,7 +3,8 @@
 	<?php
 
 	$query = new WP_Query(array(
-		'category_name' => 'Ближайшие ',
+		'post_type'=> array('post','tour'),
+		'category_name' => 'Ближайшие',
 		'posts_per_page' => 6,
 	    )
     );

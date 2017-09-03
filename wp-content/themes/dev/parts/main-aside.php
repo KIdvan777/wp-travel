@@ -4,7 +4,7 @@
 	<?php
 	$query = new WP_Query(array(
 		'category_name' => 'Лучшие туры',
-		'posts_per_page' => 5,
+		'posts_per_page' => 6,
 	));
 
 	while($query->have_posts()){

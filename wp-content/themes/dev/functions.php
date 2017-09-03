@@ -89,6 +89,40 @@ function travel_setup() {
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
+
+add_action('init', 'my_custom_init');
+function my_custom_init(){
+	register_post_type('tour', array(
+		'labels'             => array(
+			'name'               => 'Туры', // Основное название типа записи
+			'singular_name'      => 'Туры', // отдельное название записи типа Book
+			'add_new'            => 'Добавить новый',
+			'add_new_item'       => 'Добавить новый Туры',
+			'edit_item'          => 'Редактировать Туры',
+			'new_item'           => 'Новые Туры',
+			'view_item'          => 'Посмотреть Туры',
+			'search_items'       => 'Найти Туры',
+			'not_found'          =>  'Туров не найдено',
+			'not_found_in_trash' => 'В корзине книг не найдено',
+			'parent_item_colon'  => '',
+			'menu_name'          => 'Туры'
+
+		),
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array('title','editor','author','thumbnail','excerpt','comments'),
+		'taxonomies'          => array('category','post_tag')
+	) );
+}
+
 // travel_agency_setup
 add_action( 'after_setup_theme', 'travel_setup' );
 
@@ -124,3 +158,4 @@ function travel_scripts()
 	// add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
 }
 add_action('wp_enqueue_scripts', 'travel_scripts');
+
