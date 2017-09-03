@@ -19,7 +19,7 @@ $wp_file_descriptions = array(
 	'sidebar.php'           => __( 'Sidebar' ),
 	'comments.php'          => __( 'Comments' ),
 	'searchform.php'        => __( 'Search Form' ),
-	'404.php'               => __( '404 Template' ),
+	'404.php.php'               => __( '404.php Template' ),
 	'link.php'              => __( 'Links Template' ),
 	// Archives
 	'index.php'             => __( 'Main Index Template' ),
@@ -44,7 +44,7 @@ $wp_file_descriptions = array(
 	'application.php'       => __( 'Application Attachment Template' ),
 	// Embeds
 	'embed.php'             => __( 'Embed Template' ),
-	'embed-404.php'         => __( 'Embed 404 Template' ),
+	'embed-404.php.php'         => __( 'Embed 404.php Template' ),
 	'embed-content.php'     => __( 'Embed Content Template' ),
 	'header-embed.php'      => __( 'Embed Header Template' ),
 	'footer-embed.php'      => __( 'Embed Footer Template' ),

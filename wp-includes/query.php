@@ -685,7 +685,7 @@ function is_year() {
 }
 
 /**
- * Is the query a 404 (returns no results)?
+ * Is the query a 404.php (returns no results)?
  *
  * @since 1.5.0
  *

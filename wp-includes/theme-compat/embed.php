@@ -17,7 +17,7 @@ if ( have_posts() ) :
 		get_template_part( 'embed', 'content' );
 	endwhile;
 else :
-	get_template_part( 'embed', '404' );
+	get_template_part( 'embed', '404.php' );
 endif;
 
 get_footer( 'embed' );

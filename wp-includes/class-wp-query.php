@@ -767,7 +767,7 @@ class WP_Query {
 
 		if ( ! is_scalar( $qv['p'] ) || $qv['p'] < 0 ) {
 			$qv['p'] = 0;
-			$qv['error'] = '404';
+			$qv['error'] = '404.php';
 		} else {
 			$qv['p'] = intval( $qv['p'] );
 		}
@@ -842,7 +842,7 @@ class WP_Query {
 				if ( ! $this->is_date ) {
 					$date = sprintf( '%04d-%02d-%02d', $qv['year'], $qv['monthnum'], $qv['day'] );
 					if ( $qv['monthnum'] && $qv['year'] && ! wp_checkdate( $qv['monthnum'], $qv['day'], $qv['year'], $date ) ) {
-						$qv['error'] = '404';
+						$qv['error'] = '404.php';
 					} else {
 						$this->is_day = true;
 						$this->is_date = true;
@@ -853,7 +853,7 @@ class WP_Query {
 			if ( $qv['monthnum'] ) {
 				if ( ! $this->is_date ) {
 					if ( 12 < $qv['monthnum'] ) {
-						$qv['error'] = '404';
+						$qv['error'] = '404.php';
 					} else {
 						$this->is_month = true;
 						$this->is_date = true;
@@ -1037,7 +1037,7 @@ class WP_Query {
 		$this->is_singular = $this->is_single || $this->is_page || $this->is_attachment;
 		// Done correcting is_* for page_on_front and page_for_posts
 
-		if ( '404' == $qv['error'] )
+		if ( '404.php' == $qv['error'] )
 			$this->set_404();
 
 		$this->is_embed = $this->is_embed && ( $this->is_singular || $this->is_404 );
@@ -1606,7 +1606,7 @@ class WP_Query {
 	}
 
 	/**
-	 * Sets the 404 property and saves whether query is feed.
+	 * Sets the 404.php property and saves whether query is feed.
 	 *
 	 * @since 2.0.0
 	 * @access public
@@ -3929,7 +3929,7 @@ class WP_Query {
 	}
 
 	/**
-	 * Is the query a 404 (returns no results)?
+	 * Is the query a 404.php (returns no results)?
 	 *
 	 * @since 3.1.0
 	 *

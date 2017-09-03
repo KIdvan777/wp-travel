@@ -165,14 +165,14 @@ class WP {
 		} elseif ( ! empty( $extra_query_vars ) ) {
 			parse_str( $extra_query_vars, $this->extra_query_vars );
 		}
-		// Process PATH_INFO, REQUEST_URI, and 404 for permalinks.
+		// Process PATH_INFO, REQUEST_URI, and 404.php for permalinks.
 
 		// Fetch the rewrite rules.
 		$rewrite = $wp_rewrite->wp_rewrite_rules();
 
 		if ( ! empty($rewrite) ) {
 			// If we match a rewrite rule, this will be cleared.
-			$error = '404';
+			$error = '404.php';
 			$this->did_permalink = true;
 
 			$pathinfo = isset( $_SERVER['PATH_INFO'] ) ? $_SERVER['PATH_INFO'] : '';
@@ -186,7 +186,7 @@ class WP {
 
 			// Trim path info from the end and the leading home path from the
 			// front. For path info requests, this leaves us with the requesting
-			// filename, if any. For 404 requests, this leaves us with the
+			// filename, if any. For 404.php requests, this leaves us with the
 			// requested permalink.
 			$req_uri = str_replace($pathinfo, '', $req_uri);
 			$req_uri = trim($req_uri, '/');
@@ -264,8 +264,8 @@ class WP {
 				// Parse the query.
 				parse_str($query, $perma_query_vars);
 
-				// If we're processing a 404 request, clear the error var since we found something.
-				if ( '404' == $error )
+				// If we're processing a 404.php request, clear the error var since we found something.
+				if ( '404.php' == $error )
 					unset( $error, $_GET['error'] );
 			}
 
@@ -618,17 +618,17 @@ class WP {
  	}
 
  	/**
-	 * Set the Headers for 404, if nothing is found for requested URL.
+	 * Set the Headers for 404.php, if nothing is found for requested URL.
 	 *
-	 * Issue a 404 if a request doesn't match any posts and doesn't match
-	 * any object (e.g. an existing-but-empty category, tag, author) and a 404 was not already
+	 * Issue a 404.php if a request doesn't match any posts and doesn't match
+	 * any object (e.g. an existing-but-empty category, tag, author) and a 404.php was not already
 	 * issued, and if the request was not a search or the homepage.
 	 *
 	 * Otherwise, issue a 200.
 	 *
 	 * This sets headers after posts have been queried. handle_404() really means "handle status."
 	 * By inspecting the result of querying posts, seemingly successful requests can be switched to
-	 * a 404 so that canonical redirection logic can kick in.
+	 * a 404.php so that canonical redirection logic can kick in.
 	 *
 	 * @since 2.0.0
      * @access public
@@ -653,11 +653,11 @@ class WP {
 			return;
 		}
 
-		// If we've already issued a 404, bail.
+		// If we've already issued a 404.php, bail.
 		if ( is_404() )
 			return;
 
-		// Never 404 for the admin, robots, or if we found posts.
+		// Never 404.php for the admin, robots, or if we found posts.
 		if ( is_admin() || is_robots() || $wp_query->posts ) {
 
 			$success = true;
@@ -687,30 +687,30 @@ class WP {
 			}
 		}
 
-		// We will 404 for paged queries, as no posts were found.
+		// We will 404.php for paged queries, as no posts were found.
 		if ( ! is_paged() ) {
 
-			// Don't 404 for authors without posts as long as they matched an author on this site.
+			// Don't 404.php for authors without posts as long as they matched an author on this site.
 			$author = get_query_var( 'author' );
 			if ( is_author() && is_numeric( $author ) && $author > 0 && is_user_member_of_blog( $author ) ) {
 				status_header( 200 );
 				return;
 			}
 
-			// Don't 404 for these queries if they matched an object.
+			// Don't 404.php for these queries if they matched an object.
 			if ( ( is_tag() || is_category() || is_tax() || is_post_type_archive() ) && get_queried_object() ) {
 				status_header( 200 );
 				return;
 			}
 
-			// Don't 404 for these queries either.
+			// Don't 404.php for these queries either.
 			if ( is_home() || is_search() || is_feed() ) {
 				status_header( 200 );
 				return;
 			}
 		}
 
-		// Guess it's time to 404.
+		// Guess it's time to 404.php.
 		$wp_query->set_404();
 		status_header( 404 );
 		nocache_headers();

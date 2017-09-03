@@ -1,12 +1,12 @@
 <?php
 /**
- * Exception for 404 Not Found responses
+ * Exception for 404.php Not Found responses
  *
  * @package Requests
  */
 
 /**
- * Exception for 404 Not Found responses
+ * Exception for 404.php Not Found responses
  *
  * @package Requests
  */

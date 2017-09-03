@@ -11,3 +11,14 @@ Text Domain: travel
 Tags:
 
 */
+footer .foot-menu #menu-footer{
+    display: inline-block;
+    width:70%;
+    padding: 0;
+}footer .foot-menu #menu-footer li a:hover{
+     color: #d24602;
+ }
+
+footer .foot-menu .copyright{
+    margin-top:30px;
+}

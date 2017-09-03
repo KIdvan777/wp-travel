@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * The template for displaying 404.php pages (not found)
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen
@@ -22,7 +22,7 @@ get_header(); ?>
 
 					<?php get_search_form(); ?>
 				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+			</section><!-- .error-404.php -->
 
 		</main><!-- .site-main -->
 

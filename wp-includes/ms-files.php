@@ -20,13 +20,13 @@ error_reporting( 0 );
 
 if ( $current_blog->archived == '1' || $current_blog->spam == '1' || $current_blog->deleted == '1' ) {
 	status_header( 404 );
-	die( '404 &#8212; File not found.' );
+	die( '404.php &#8212; File not found.' );
 }
 
 $file = rtrim( BLOGUPLOADDIR, '/' ) . '/' . str_replace( '..', '', $_GET[ 'file' ] );
 if ( !is_file( $file ) ) {
 	status_header( 404 );
-	die( '404 &#8212; File not found.' );
+	die( '404.php &#8212; File not found.' );
 }
 
 $mime = wp_check_filetype( $file );

@@ -979,7 +979,7 @@ function wp_get_document_title() {
 		'title' => '',
 	);
 
-	// If it's a 404 page, use a "Page not found" title.
+	// If it's a 404.php page, use a "Page not found" title.
 	if ( is_404() ) {
 		$title['title'] = __( 'Page not found' );
 
@@ -1194,7 +1194,7 @@ function wp_title( $sep = '&raquo;', $display = true, $seplocation = '' ) {
 		$title = sprintf( __( 'Search Results %1$s %2$s' ), $t_sep, strip_tags( $search ) );
 	}
 
-	// If it's a 404 page
+	// If it's a 404.php page
 	if ( is_404() ) {
 		$title = __( 'Page not found' );
 	}

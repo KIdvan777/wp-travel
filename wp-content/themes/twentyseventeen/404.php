@@ -26,7 +26,7 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 
 				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+			</section><!-- .error-404.php -->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 </div><!-- .wrap -->

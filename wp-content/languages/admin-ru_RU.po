@@ -690,8 +690,8 @@ msgid "Embed Content Template"
 msgstr "Шаблон содержимого объекта"
 
 #: wp-admin/includes/file.php:47
-msgid "Embed 404 Template"
-msgstr "Шаблон ошибки 404 для объекта"
+msgid "Embed 404.php Template"
+msgstr "Шаблон ошибки 404.php для объекта"
 
 #: wp-admin/includes/file.php:46
 msgid "Embed Template"
@@ -10066,8 +10066,8 @@ msgid "Links Template"
 msgstr "Шаблон ссылок"
 
 #: wp-admin/includes/file.php:22
-msgid "404 Template"
-msgstr "Шаблон ошибки 404"
+msgid "404.php Template"
+msgstr "Шаблон ошибки 404.php"
 
 #: wp-admin/includes/file.php:36
 msgid "Single Post"

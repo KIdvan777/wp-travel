@@ -1,0 +1,30 @@
+footer {
+    width:58.7%;
+    margin-left: auto;
+    margin-right: auto;}
+footer .foot-menu ul {
+    margin: 0;
+    height: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px; }
+footer .foot-menu ul li {
+    float: left;
+    list-style: none;
+    margin-left: 20px; }
+footer .foot-menu ul li a {
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Verdana";
+    font-weight: bold;
+    color: #747a7e;
+    line-height: 1.167;
+    text-align: left; }
+footer .foot-menu .copyright {
+    float: right;
+    margin-right: 20px; }
+footer .foot-menu .copyright span {
+    font-size: 12px;
+    font-family: "Verdana";
+    color: #747a7e;
+    line-height: 1.167;
+    text-align: left; }

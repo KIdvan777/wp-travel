@@ -2014,7 +2014,7 @@ function signup_nonce_check( $result ) {
 }
 
 /**
- * Correct 404 redirects when NOBLOGREDIRECT is defined.
+ * Correct 404.php redirects when NOBLOGREDIRECT is defined.
  *
  * @since MU
  */

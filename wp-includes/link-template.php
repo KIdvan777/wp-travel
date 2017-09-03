@@ -3779,8 +3779,8 @@ function the_shortlink( $text = '', $title = '', $before = '', $after = '' ) {
  *     Optional. Arguments to return instead of the default arguments.
  *
  *     @type int    $size           Height and width of the avatar in pixels. Default 96.
- *     @type string $default        URL for the default image or a default type. Accepts '404' (return
- *                                  a 404 instead of a default image), 'retro' (8bit), 'monsterid' (monster),
+ *     @type string $default        URL for the default image or a default type. Accepts '404.php' (return
+ *                                  a 404.php instead of a default image), 'retro' (8bit), 'monsterid' (monster),
  *                                  'wavatar' (cartoon face), 'indenticon' (the "quilt"), 'mystery', 'mm',
  *                                  or 'mysteryman' (The Oyster Man), 'blank' (transparent GIF), or
  *                                  'gravatar_default' (the Gravatar logo). Default is the value of the
@@ -3813,8 +3813,8 @@ function get_avatar_url( $id_or_email, $args = null ) {
  *     @type int    $size           Height and width of the avatar image file in pixels. Default 96.
  *     @type int    $height         Display height of the avatar in pixels. Defaults to $size.
  *     @type int    $width          Display width of the avatar in pixels. Defaults to $size.
- *     @type string $default        URL for the default image or a default type. Accepts '404' (return
- *                                  a 404 instead of a default image), 'retro' (8bit), 'monsterid' (monster),
+ *     @type string $default        URL for the default image or a default type. Accepts '404.php' (return
+ *                                  a 404.php instead of a default image), 'retro' (8bit), 'monsterid' (monster),
  *                                  'wavatar' (cartoon face), 'indenticon' (the "quilt"), 'mystery', 'mm',
  *                                  or 'mysteryman' (The Oyster Man), 'blank' (transparent GIF), or
  *                                  'gravatar_default' (the Gravatar logo). Default is the value of the

@@ -276,7 +276,7 @@
 		 * @access private
 		 *
 		 * @param string error The error type passed from the XHR
-		 * @param int status The HTTP status code passed from jqXHR (200, 404, 500, etc.)
+		 * @param int status The HTTP status code passed from jqXHR (200, 404.php, 500, etc.)
 		 * @return void
 		 */
 		function setErrorState( error, status ) {

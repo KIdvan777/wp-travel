@@ -31,7 +31,7 @@ function get_query_template( $type, $templates = array() ) {
 	 *
 	 * The last element in the array should always be the fallback template for this query type.
 	 *
-	 * Possible values for `$type` include: 'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date',
+	 * Possible values for `$type` include: 'index', '404.php', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date',
 	 * 'embed', home', 'frontpage', 'page', 'paged', 'search', 'single', 'singular', and 'attachment'.
 	 *
 	 * @since 4.7.0
@@ -49,7 +49,7 @@ function get_query_template( $type, $templates = array() ) {
 	 * extension and any non-alphanumeric characters delimiting words -- of the file to load.
 	 * This hook also applies to various types of files loaded as part of the Template Hierarchy.
 	 *
-	 * Possible values for `$type` include: 'index', '404', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date',
+	 * Possible values for `$type` include: 'index', '404.php', 'archive', 'author', 'category', 'tag', 'taxonomy', 'date',
 	 * 'embed', home', 'frontpage', 'page', 'paged', 'search', 'single', 'singular', and 'attachment'.
 	 *
 	 * @since 1.5.0
@@ -79,7 +79,7 @@ function get_index_template() {
 }
 
 /**
- * Retrieve path of 404 template in current or parent template.
+ * Retrieve path of 404.php template in current or parent template.
  *
  * The template hierarchy is filterable via the {@see '404_template_hierarchy'} hook.
  * The template path is filterable via the {@see '404_template'} hook.
@@ -88,10 +88,10 @@ function get_index_template() {
  *
  * @see get_query_template()
  *
- * @return string Full path to 404 template file.
+ * @return string Full path to 404.php template file.
  */
 function get_404_template() {
-	return get_query_template('404');
+	return get_query_template('404.php');
 }
 
 /**

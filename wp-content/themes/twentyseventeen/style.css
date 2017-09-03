@@ -2281,7 +2281,7 @@ body:not(.twentyseventeen-front-page) .entry-header {
 	padding-bottom: 1.5em;
 }
 
-/* 404 page */
+/* 404.php page */
 
 .error404 .page-content {
 	padding-bottom: 4em;
@@ -3919,7 +3919,7 @@ object {
 		padding-bottom: 3.25em;
 	}
 
-	/* 404 page */
+	/* 404.php page */
 
 	.error404 .page-content {
 		padding-bottom: 9em;

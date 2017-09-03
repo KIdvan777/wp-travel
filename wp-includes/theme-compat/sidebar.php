@@ -33,7 +33,7 @@ _deprecated_file(
 						is_year() || is_search() || is_paged() ) :
 			?> <li>
 
-			<?php if ( is_404() ) : /* If this is a 404 page */ ?>
+			<?php if ( is_404() ) : /* If this is a 404.php page */ ?>
 			<?php elseif ( is_category() ) : /* If this is a category archive */ ?>
 				<p><?php /* translators: %s: category name */
 					printf( __( 'You are currently browsing the archives for the %s category.' ),
