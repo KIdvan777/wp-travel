@@ -49,6 +49,8 @@ function travel_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary menu', 'travel' ),
 		'footer'  => __( 'Footer menu', 'travel' ),
+		'filter'  => __('Filter menu', 'travel'),
+		'country'  => __('Filter menu', 'travel'),
 	) );
 
 	/*
@@ -152,6 +154,9 @@ function travel_scripts()
 	}else if(is_page('contacts')){
 
 		wp_enqueue_style('travel_services_tours', get_template_directory_uri() . '/css/contact.css');
+	}else if(is_page('winter')){
+
+		wp_enqueue_style('travel_services_tours', get_template_directory_uri() . '/css/best-tours.css');
 	};
 	wp_enqueue_style('awesome', get_template_directory_uri() . '/libs/font-awesome/css/font-awesome.css');
 

@@ -1,0 +1,28 @@
+.pagination {
+    float: left;
+    margin-left: 230px; }
+.pagination a {
+    text-decoration: none;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e4e2e2;
+    font-size: 14px;
+    font-family: "Verdana";
+    color: #1987cb;
+    font-weight: bold;
+    text-align: center;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background-image: -webkit-linear-gradient(90deg, #ececea 0%, #fdfdfd 100%);
+    background-image: -ms-linear-gradient(90deg, #ececea 0%, #fdfdfd 100%);
+    -webkit-box-shadow: 1px 1.732px 2px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 1px 1.732px 2px 0px rgba(0, 0, 0, 0.03); }
+.pagination a:hover {
+    background-image: -webkit-gradient(linear, left top, right top, from(#f47c0e), to(#faa848));
+    background-image: -webkit-linear-gradient(left, #f47c0e 0%, #faa848 100%);
+    background-image: -o-linear-gradient(left, #f47c0e 0%, #faa848 100%);
+    background-image: linear-gradient(90deg, #f47c0e 0%, #faa848 100%);
+    box-shadow: 1px 1.732px 2px 0px rgba(2, 0, 0, 0.21);
+    -webkit-box-shadow: 1px 1.732px 2px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 1px 1.732px 2px 0px rgba(0, 0, 0, 0.03); }

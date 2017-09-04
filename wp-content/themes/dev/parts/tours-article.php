@@ -28,4 +28,5 @@
 	wp_reset_postdata();
 	?>
 
+
 </article>
