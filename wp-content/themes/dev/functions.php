@@ -138,26 +138,26 @@ function travel_scripts()
 	wp_enqueue_style('travel', get_template_directory_uri() . '/css/index.css');
 
 	if(is_page('tours')){
-
 		wp_enqueue_style('travel_tours', get_template_directory_uri() . '/css/tours.css');
 
 	}else if(is_page('best-tours')){
-
 		wp_enqueue_style('travel_best_tours', get_template_directory_uri() . '/css/best-tours.css');
 
 	}else if(is_page('services')){
-
 		wp_enqueue_style('travel_services_tours', get_template_directory_uri() . '/css/service.css');
+
 	}else if(is_page('about')){
+		wp_enqueue_style('travel_about_tours', get_template_directory_uri() . '/css/about.css');
 
-		wp_enqueue_style('travel_services_tours', get_template_directory_uri() . '/css/about.css');
 	}else if(is_page('contacts')){
+		wp_enqueue_style('travel_contacts_tours', get_template_directory_uri() . '/css/contact.css');
 
-		wp_enqueue_style('travel_services_tours', get_template_directory_uri() . '/css/contact.css');
-	}else if(is_page('winter')){
+	}else if(is_tag()){
+		wp_enqueue_style('travel_tag', get_template_directory_uri() . '../css/tag.css');
 
-		wp_enqueue_style('travel_services_tours', get_template_directory_uri() . '/css/best-tours.css');
+
 	};
+
 	wp_enqueue_style('awesome', get_template_directory_uri() . '/libs/font-awesome/css/font-awesome.css');
 
 	// add_action('wp_print_styles', 'theme_name_scripts'); // можно использовать этот хук он более поздний
