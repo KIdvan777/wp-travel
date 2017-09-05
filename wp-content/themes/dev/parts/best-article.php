@@ -1,7 +1,8 @@
 <?php
 
 $query = new WP_Query(array(
-		'category_name' => 'Новые ',
+		'post_type'=> array('post','tour'),
+		'category_name' => 'best',
 		'posts_per_page' => 6,
 	)
 );

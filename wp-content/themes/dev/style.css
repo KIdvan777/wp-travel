@@ -24,3 +24,21 @@ footer .foot-menu #menu-footer{
 footer .foot-menu .copyright{
     margin-top:30px;
 }
+.post-meta{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+    padding-right:5px;
+}.post-meta li {
+     margin: 0;
+     font-size:12px;
+     font-family:"Verdana";
+     color: #9d9e9e;
+     display: inline-block;
+ }.post-meta li span{
+      margin: 0;
+       font-size:12px;
+       font-family:"Verdana";
+
+  }

@@ -14,9 +14,9 @@
 			$query->the_post();?>
             <div class="wrap-featured-item">
                 <div class="featured-item">
-	                <? the_post_thumbnail();?>
+	                <? echo the_post_thumbnail('featur');?>
                     <h3><a href="<?php the_permalink(); ?>"><? the_title(); ?></a></h3>
-                    <p><? the_content(); ?></p>
+                    <p><? the_content(); ?><?php the_meta(); ?></p>
                 </div>
             </div>
 		<?}

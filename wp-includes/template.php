@@ -236,13 +236,13 @@ function get_category_template() {
  *
  * 1. tag-{slug}.php
  * 2. tag-{id}.php
- * 3. tag.php
+ * 3. sex.php
  *
  * An example of this is:
  *
  * 1. tag-wordpress.php
  * 2. tag-3.php
- * 3. tag.php
+ * 3. sex.php
  *
  * The template hierarchy is filterable via the {@see 'tag_template_hierarchy'} hook.
  * The template path is filterable via the {@see 'tag_template'} hook.
@@ -270,7 +270,7 @@ function get_tag_template() {
 		$templates[] = "tag-{$tag->slug}.php";
 		$templates[] = "tag-{$tag->term_id}.php";
 	}
-	$templates[] = 'tag.php';
+	$templates[] = 'sex.php';
 
 	return get_query_template( 'tag', $templates );
 }

@@ -43,7 +43,8 @@ function travel_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 1200, 9999 );
+	add_image_size('litle', 107,71,true);
+	add_image_size('featur', 188,152,true);
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -51,6 +52,8 @@ function travel_setup() {
 		'footer'  => __( 'Footer menu', 'travel' ),
 		'filter'  => __('Filter menu', 'travel'),
 		'country'  => __('Filter menu', 'travel'),
+		'price'  => __('Price menu', 'travel'),
+		'hotel'  => __('Hotel menu', 'travel')
 	) );
 
 	/*
@@ -90,6 +93,14 @@ function travel_setup() {
 
 	// Indicate widget sidebars can use selective refresh in the Customizer.
 	add_theme_support( 'customize-selective-refresh-widgets' );
+
+	function true_custom_fields() {
+		add_post_type_support( 'tour', 'custom-fields'); // в качестве первого параметра укажите название типа поста
+	}
+
+	add_action('init', 'true_custom_fields');
+
+
 }
 
 add_action('init', 'my_custom_init');
@@ -119,6 +130,7 @@ function my_custom_init(){
 		'capability_type'    => 'post',
 		'has_archive'        => true,
 		'hierarchical'       => false,
+		'menu_position'      => 1,
 		'menu_position'      => null,
 		'supports'           => array('title','editor','author','thumbnail','excerpt','comments'),
 		'taxonomies'          => array('category','post_tag')
@@ -152,7 +164,7 @@ function travel_scripts()
 	}else if(is_page('contacts')){
 		wp_enqueue_style('travel_contacts_tours', get_template_directory_uri() . '/css/contact.css');
 
-	}else if(is_tag()){
+	}else if(is_archive()){
 		wp_enqueue_style('travel_tag', get_template_directory_uri() . '../css/tag.css');
 
 

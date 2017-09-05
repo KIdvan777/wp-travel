@@ -4,7 +4,7 @@
 	<?php
 	$query = new WP_Query(array(
 		'category_name' => 'Лучшие туры',
-		'posts_per_page' => 6,
+		'posts_per_page' => 5,
 	));
 
 	while($query->have_posts()){
@@ -12,7 +12,7 @@
 
         <div class="top-dest">
             <div class="top-item">
-                <? the_post_thumbnail();?>
+                <? the_post_thumbnail('large');?>
                 <div class="top">
                     <h5><a href="<? the_permalink();?>"><? the_title();?></a></h5>
                     <p><? the_content();?></p>
@@ -23,5 +23,5 @@
 	<?};
 	wp_reset_postdata();
 	?>
-	<p><a href="">Показать все</a></p>
+	<p><a href="<? the_permalink();?>">Показать все</a></p>
 </div>

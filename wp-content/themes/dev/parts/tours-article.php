@@ -1,6 +1,8 @@
 <article>
+
 	<?php
 	$query = new WP_Query(array(
+		'post_type'=> array('post','tour'),
 		'category_name' => 'Туры',
 		'posts_per_page' => '6'
 	));

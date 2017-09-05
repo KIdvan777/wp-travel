@@ -4,10 +4,10 @@
 @import "filter.css";
 
 .content {
-    float: left;
-    width: 358px;
-    height: 130px;
-    margin-left: 16px;
+    float: right;
+    width: 729px;
+    height: 160px;
+    margin-right: 16px;
     margin-bottom: 10px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -22,30 +22,41 @@
 .content .wrap h2 a {
     display: inline-block;
     text-decoration: none;
-    font-size: 12px;
+    margin-left: 10px;
+    font-size: 14px;
     font-family: "Verdana";
     color: #1987cb;
-    font-weight: bold; }
+    font-weight: bold;
+    text-align: left; }
+.content .wrap h2 span {
+    float: right;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: "Verdana";
+    color: #1987cb;
+    font-weight: bold;
+    line-height: 1.5; }
+.content .wrap h2 b {
+    text-align: right;
+    color: red; }
 .content .wrap .turs-item img {
     float: left;
     margin-top: 10px;
     margin-left: 8px;
     margin-bottom: 8px;
     margin-right: 8px; }
-.content .wrap .next {
-    float: right;
-    width: 48%; }
 .content .wrap .next span {
     display: inline-block;
+    margin-top: 8px;
     font-size: 12px;
     font-family: "Verdana";
     color: #9d9e9e;
     text-align: left; }
-.content .wrap .next span b {
-    text-align: right;
-    color: red; }
 .content .wrap .next p {
     margin: 0;
+    margin-top: 6px;
     font-size: 12px;
     font-family: "Verdana";
     color: #9d9e9e;
@@ -53,7 +64,7 @@
 .content .wrap .next button {
     display: inline-block;
     float: left;
-    margin-top: 8px;
+    margin-top: 12px;
     color: #fff;
     font-family: "Myriad Pro";
     font-size: 18px;
