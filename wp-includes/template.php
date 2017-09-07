@@ -190,13 +190,13 @@ function get_author_template() {
  *
  * 1. category-{slug}.php
  * 2. category-{id}.php
- * 3. category.php
+ * 3. category-best.php
  *
  * An example of this is:
  *
  * 1. category-news.php
  * 2. category-2.php
- * 3. category.php
+ * 3. category-best.php
  *
  * The template hierarchy is filterable via the {@see 'category_template_hierarchy'} hook.
  * The template path is filterable via the {@see 'category_template'} hook.
@@ -224,7 +224,7 @@ function get_category_template() {
 		$templates[] = "category-{$category->slug}.php";
 		$templates[] = "category-{$category->term_id}.php";
 	}
-	$templates[] = 'category.php';
+	$templates[] = 'category-best.php';
 
 	return get_query_template( 'category', $templates );
 }
@@ -282,13 +282,13 @@ function get_tag_template() {
  *
  * 1. taxonomy-{taxonomy_slug}-{term_slug}.php
  * 2. taxonomy-{taxonomy_slug}.php
- * 3. taxonomy.php
+ * 3. taxonomy-tr.php
  *
  * An example of this is:
  *
  * 1. taxonomy-location-texas.php
  * 2. taxonomy-location.php
- * 3. taxonomy.php
+ * 3. taxonomy-tr.php
  *
  * The template hierarchy is filterable via the {@see 'taxonomy_template_hierarchy'} hook.
  * The template path is filterable via the {@see 'taxonomy_template'} hook.
@@ -317,7 +317,7 @@ function get_taxonomy_template() {
 		$templates[] = "taxonomy-$taxonomy-{$term->slug}.php";
 		$templates[] = "taxonomy-$taxonomy.php";
 	}
-	$templates[] = 'taxonomy.php';
+	$templates[] = 'taxonomy-tr.php';
 
 	return get_query_template( 'taxonomy', $templates );
 }

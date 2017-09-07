@@ -1,6 +1,7 @@
 <?php
 $query = new WP_Query(array(
-	'category_name' => 'Сервисы',
+	'post_type'=> array('services'),
+	'taxserv' =>'ser',
 	'posts_per_page' => '6'
 ));
 

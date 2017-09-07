@@ -1,5 +1,5 @@
 <?php get_header();?>
-its single
+	tu
 
 <? the_post_thumbnail('large');?>
 <? the_title();?>
