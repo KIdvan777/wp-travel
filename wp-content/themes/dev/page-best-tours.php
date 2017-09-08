@@ -8,5 +8,6 @@
 	</article>
 
 
-<?php get_template_part('parts/pagination');?>
+<?// Previous/next page navigation.
+	the_posts_pagination( ); ?>
 <?php get_footer();?>

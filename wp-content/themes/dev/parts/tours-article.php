@@ -10,7 +10,7 @@
 	$query = new WP_Query(array(
 		'post_type'=> array('tours'),
 		// 'taxtour' =>'украина',
-		'posts_per_page' => '6'
+		//'posts_per_page' => ''
 	));
 
 	while($query->have_posts()){
