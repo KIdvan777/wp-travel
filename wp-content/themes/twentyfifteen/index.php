@@ -57,5 +57,22 @@ get_header(); ?>
 
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
-
+	hjg
+<?wp_tag_cloud( array(
+		'smallest'                  => 8,
+		'largest'                   => 22,
+		'unit'                      => 'pt',
+		'number'                    => 45,
+		'format'                    => 'flat',
+		'separator'                 => "\n",
+		'orderby'                   => 'name',
+		'order'                     => 'ASC',
+		'exclude'                   => null,
+		'include'                   => null,
+		'topic_count_text_callback' => 'default_topic_count_text',
+		'link'                      => 'view',
+		'taxonomy'                  => 'post_tag',
+		'echo'                      => true,
+	) );
+?>
 <?php get_footer(); ?>

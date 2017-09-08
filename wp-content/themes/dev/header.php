@@ -13,8 +13,17 @@
 		</div>
 		<div class="phone">
 			<img src="<?  echo get_template_directory_uri().'/images/phone.png'; ?>" alt="">
-			<span>123-456-789</span>
-			<p><?php bloginfo( 'description' ); ?></p>
+			<span>
+			<?php
+				if ( function_exists('dynamic_sidebar') )
+					dynamic_sidebar('phone-sidebar');
+				?>
+						
+			</span>
+			<p><?php
+				if ( function_exists('dynamic_sidebar') )
+					dynamic_sidebar('time-sidebar');
+				?></p>
 		</div>
 		<div class="head">
                 <?php

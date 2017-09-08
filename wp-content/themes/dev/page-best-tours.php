@@ -6,5 +6,7 @@
 		<? get_template_part('parts/best','article'); ?>
 
 	</article>
+
+
 <?php get_template_part('parts/pagination');?>
 <?php get_footer();?>

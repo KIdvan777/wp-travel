@@ -1,9 +1,9 @@
 <?php
 
 $query = new WP_Query(array(
-		'post_type'=> array('best'),
-		'taxbest' =>'uk',
-		'posts_per_page' => 6,
+		'post_type'=> array('tours'),
+		'taxtours' =>'Лучшие',
+
 	)
 );
 
@@ -13,14 +13,14 @@ if ( $query->have_posts() ) {
 		<div class="content">
 			<div class="wrap">
 				<div class="turs-item">
-					<? the_post_thumbnail();?>
+					<? the_post_thumbnail('tours');?>
 				</div>
 				<div class="next">
 					<h2><a href="<? the_permalink();?>"><? the_title();?></a></h2>
 					<span>from &nbsp<b>$339-560</b></span><br>
 					<span>Location</span>
 					<p>
-						<? the_content();?>
+						<? the_content();?><? the_category();?>
 					</p>
 					<button>подробнее</button>
 				</div>

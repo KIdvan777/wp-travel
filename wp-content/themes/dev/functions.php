@@ -28,23 +28,25 @@ function travel_setup() {
 		'flex-height' => true,
 	) );
 
+// add links to thumbnails
+	 add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
 
-	add_filter( 'post_thumbnail_html', 'my_post_image_html', 10, 3 );
+	 function my_post_image_html( $html, $post_id, $post_image_id ) {
 
-	function my_post_image_html( $html, $post_id, $post_image_id ) {
+	 	$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
+	 	return $html;
 
-		$html = '<a href="' . get_permalink( $post_id ) . '" title="' . esc_attr( get_post_field( 'post_title', $post_id ) ) . '">' . $html . '</a>';
-		return $html;
-
-	}
+	 }
 	/*
 	 * Enable support for Post Thumbnails on posts and pages.
 	 *
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size('litle', 107,71,true);
-	add_image_size('featur', 188,152,true);
+
+	add_image_size('little', 107,71,true);
+	add_image_size('tours', 159,103,true);
+	add_image_size('feature', 188,152,true);
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -84,6 +86,34 @@ function travel_setup() {
 		'audio',
 		'chat',
 	) );
+
+		function register_phone_widget(){
+		register_sidebar( array(
+			'name' => "Телефон",
+			'id' => 'phone-sidebar',
+			'description' => 'Эти виджеты будут показаны с правой колонке сайта',
+			'class'         => '',
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+	}
+	add_action( 'widgets_init', 'register_phone_widget' );
+
+	function register_timework_widget(){
+		register_sidebar( array(
+			'name' => "Время работы",
+			'id' => 'time-sidebar',
+			'description' => 'Эти виджеты будут показаны с правой колонке сайта',
+			'class'         => '',
+			'before_widget' => '',
+			'after_widget'  => '',
+			'before_title'  => '',
+			'after_title'   => '',
+		) );
+	}
+	add_action( 'widgets_init', 'register_timework_widget' );
 
 	/*
 	 * This theme styles the visual editor to resemble the theme style,

@@ -1,9 +1,15 @@
 <article>
 
 	<?php
+
+	 // wp_list_categories();
+	 // wp_list_categories('taxonomy=taxbest');
+
+
+
 	$query = new WP_Query(array(
 		'post_type'=> array('tours'),
-		'taxtour' =>'украина',
+		// 'taxtour' =>'украина',
 		'posts_per_page' => '6'
 	));
 
@@ -15,12 +21,13 @@
 				<h2><a href="<? the_permalink();?>">
                         <? the_title();?></a> <span>from &nbsp<b>$339-560</b></span></h2>
 				<div class="turs-item">
-					<? the_post_thumbnail();?>
+					<? the_post_thumbnail('tours');?>
 				</div>
 				<div class="next">
 					<span>Location</span>
 					<p>
-						<? the_content();?>
+						<? ?>
+	
 					</p>
 					<button><a href="<? the_permalink();?>"></a>подробнее</button>
 				</div>

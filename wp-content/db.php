@@ -1,0 +1,1 @@
+C:/OpenServer/domains/travel/wp-content/plugins/query-monitor/wp-content/db.php

@@ -11,7 +11,7 @@ while($query->have_posts()){
 	<div class="serv-item">
 		<h2><? the_title();?></h2>
 		<div class="wrap-serv-item">
-			<? the_post_thumbnail();?>
+            <a href="<? the_permalink();?>"><? the_post_thumbnail();?></a>
 			<p>
 				<? the_content();?>
 			</p>
